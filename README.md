@@ -1,37 +1,16 @@
-# RentX – Car Rental Booking Web Application
+# React + Vite
 
-RentX is a comprehensive full-stack car rental web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). It provides a seamless experience for users to search, browse, and book vehicles based on their specific needs. Whether you are looking for a standard daily commute vehicle or a luxury car for a special occasion, RentX connects you with the perfect ride.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-The platform features both user and administrator functionalities, ensuring smooth operations from browsing to booking management.
+Currently, two official plugins are available:
 
-## 🚀 Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- **User Authentication**: Secure signup and login functionality for personalized user experiences.
-- **Smart Search & Discovery**: Efficiently search for cars based on pickup location and dates.
-- **Detailed Car Listings**: Browse and view comprehensive vehicle information, including price, fuel type, seating capacity, and transmission.
-- **Booking Management**: Book cars instantly and manage existing reservations seamlessly.
-- **Admin Dashboard**: Centralized interface for administrators to manage car inventory, registered users, and active bookings.
-- **Car Listing Functionality**: Easily add and update vehicle offerings.
-- **Secure Backend APIs**: Robust and secure server-side logic powering the application.
-- **Responsive UI**: Modern, responsive user interface built with React for an optimal viewing experience.
+## React Compiler
 
-## 🛠 Tech Stack
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **Frontend**: React.js, HTML, CSS, JavaScript
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB
-- **Tools**: Git, GitHub
+## Expanding the ESLint configuration
 
-## 📊 Project Status
-
-**Currently in development.**
-
-## 🔮 Future Enhancements
-
-- **Online Payment Integration**: Seamless and secure online transactions for direct bookings.
-- **Real-Time Availability Tracking**: Live tracking of car inventory and instant booking confirmations.
-- **Advanced Filters & Recommendations**: Enhanced search capabilities with granular filters and smart suggestions.
-- **Automated Notifications**: Email and SMS alerts for booking confirmations and important updates.
-
----
-*RentX is designed to deliver a modern, full-stack solution for the car rental industry, providing value to both customers and administrators.*
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
