@@ -96,7 +96,7 @@ export const NavItems = ({
           to={`/${item.link}`}
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="relative px-4 py-2 text-white dark:text-neutral-300"
           key={`link-${idx}`}
           href={item.link}>
           {hovered === idx && (
@@ -209,6 +209,7 @@ export const NavbarLogo = () => {
 
 export const NavbarButton = ({
   href,
+  color,
   as: Tag = "a",
   children,
   className,
@@ -216,7 +217,7 @@ export const NavbarButton = ({
   ...props
 }) => {
   const baseStyles =
-    "px-4 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center";
+    `px-4 py-2 rounded-md bg-white button bg-white text-${color} text-sm font-bold relative cursor-pointer hover:-translate-y-0.5 transition duration-200 inline-block text-center`;
 
   const variantStyles = {
     primary:
