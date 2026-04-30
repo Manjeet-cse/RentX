@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link} from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -11,35 +12,35 @@ const Footer = () => {
           Premium car rental service with a wide selection of luxury and everyday vehicles for all your driving needs.
         </p>
         <div>
-          Social links will appear here
+          Social Link to=''nks will appear here
         </div>
       </div>
       <div className='border flex p-10 gap-10 w-[40vw] h-[40vh]'>
         <div className='flex flex-col gap-5'>
-          <h1 className='text-2xl'>Quick Links</h1>
+          <h1 className='text-2xl'>Quick Linknks</h1>
           <ul>
-            <li>Home</li>
-            <li>Browse Cars</li>
-            <li>List your cars</li>
-            <li>About us</li>
+            <Link to=''>Home</Link>
+            <Link to=''>Browse Cars</Link>
+            <Link to=''>List your cars</Link>
+            <Link to=''>About us</Link>
           </ul>
         </div>
         <div className='flex flex-col gap-5'>
           <h1 className='text-2xl'>Resources</h1>
           <ul>
-            <li>Help Center</li>
-            <li>Terms of Service</li>
-            <li>Privacy Policy</li>
-            <li>Insurance</li>
+            <Link to=''>Help Center</Link>
+            <Link to=''>Terms of Service</Link>
+            <Link to=''>Privacy PoLink to=''cy</Link>
+            <Link to=''>Insurance</Link>
           </ul>
         </div>
         <div className='flex flex-col gap-5'>
           <h1 className='text-2xl'>Contact</h1>
           <ul>
-            <li>1234 Luxury Drive</li>
-            <li>San Francisco, CA 94107</li>
-            <li>+1 234 567890</li>
-            <li>info@example.com</li>
+            <Link to=''>1234 Luxury Drive</Link>
+            <Link to=''>San Francisco, CA 94107</Link>
+            <Link to=''>+1 234 567890</Link>
+            <Link to=''>info@example.com</Link>
           </ul>
         </div>
       </div>
