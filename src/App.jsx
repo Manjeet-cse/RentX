@@ -10,7 +10,7 @@ const App = () => {
     <>
       <div className="relative">
       <div className='absolute w-full'>
-      <NavbarDemo/>
+      {location.pathname != '/login' && <NavbarDemo/>}
       </div>
       <Routes>
         <Route path="/" element={<Home/>}/>
