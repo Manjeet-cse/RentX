@@ -38,10 +38,11 @@ const Home = () => {
         </h1>
         <p className='mt-3 text-base text-slate-600'>Explore our selection of premium vehicles available for your next adventure.</p>
       </div>
-      <div className='h-140 relative'>
+      <div className='h-140 flex items-center flex-col relative'>
         <CircularGallery items={galleryItems} bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}
           scrollSpeed={2}
         />
+        <button className='border py-1 rounded w-40'>Explore all cars {'->'}</button>
       </div>
       <div className='w-full flex justify-center p-20'>
           <div className='h-60 items-center flex p-10 rounded-4xl w-[80vw] bg-linear-to-r from-[#1E5BFF] via-[#4F8BFF] to-[#9FBFEF]'>
@@ -54,6 +55,15 @@ const Home = () => {
           <div>
             <img src={blueBoxCar} alt="" />
           </div>
+        </div>
+      </div>
+      <div>
+        <div className='h-60 flex flex-col gap-3 items-center justify-center'>
+          <h1 style={{ fontFamily: 'var(--font-car)' }} className='text-4xl font-extrabold'>What Our Customers Say</h1>
+          <p>Discover why discerning travelers choose StayVenture for their luxury accommodations around the world.</p>
+        </div>
+        <div>
+          
         </div>
       </div>
     </>
