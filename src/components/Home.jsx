@@ -6,6 +6,8 @@ import img1 from '../assets/image1.png'
 import img2 from '../assets/image2.png'
 import img3 from '../assets/image3.png'
 import blueBoxCar from '../assets/blueBoxCar.png'
+import CustomerFeedbackCard from './CustomerFeedbackCard'
+import { address } from 'motion/react-client'
 
 const Home = () => {
   const galleryItems = [
@@ -22,6 +24,30 @@ const Home = () => {
       text: 'third'
     }
   ]
+  const feedback = [
+    {
+      profilePhoto: img1,
+      name: "Priyanshu",
+      address: "India",
+      stars: 5,
+      description: "I've rented cars from various companies, but the experience with CarRental was exceptional."
+    },
+    {
+      profilePhoto: img2,
+      name: "Priyanshu",
+      address: "India",
+      stars: 5,
+      description: "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!"
+    },
+    {
+      profilePhoto: img3,
+      name: "Manju",
+      address: "India",
+      stars: 4,
+      description: "I highly recommend CarRental! Their fleet is amazing, and I always feel like I'm getting the best deal with excellent service."
+    }
+  ]
+  
   return (
     <>
       <div className='w-screen relative h-screen flex'>
@@ -62,7 +88,12 @@ const Home = () => {
           <h1 style={{ fontFamily: 'var(--font-car)' }} className='text-4xl font-extrabold'>What Our Customers Say</h1>
           <p>Discover why discerning travelers choose StayVenture for their luxury accommodations around the world.</p>
         </div>
-        <div>
+        <div className='flex w-full justify-center gap-10'>
+          {
+            feedback.map((obj) => {
+              return <CustomerFeedbackCard profilePhoto={obj.profilePhoto} name={obj.name} address={obj.address} stars={obj.stars} description={obj.description} />
+            })
+          }
           
         </div>
       </div>
