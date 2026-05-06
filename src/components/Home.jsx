@@ -97,6 +97,13 @@ const Home = () => {
           
         </div>
       </div>
+      <div className="flex flex-col gap-6 justify-center h-60 items-center">
+        <h1 className='font-extrabold text-4xl' style={{ fontFamily: 'var(--font-car)' }}>Never Miss a Deal!</h1>
+        <div className='flex gap-6'>
+        <input className='border rounded-2xl w-120 px-4 h-10' placeholder='Enter your email id' type="text" />
+        <button className='px-7 bg-blue-600 h-10 text-white rounded-2xl'>Subscribe</button>
+        </div>
+      </div>
     </>
   )
 }
