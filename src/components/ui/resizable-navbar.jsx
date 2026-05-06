@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 export const Navbar = ({
@@ -83,6 +83,14 @@ export const NavItems = ({
   onItemClick
 }) => {
   const [hovered, setHovered] = useState(null);
+  const navigate = useNavigate();
+
+  const handleNavClick = (link) => {
+    navigate(link);
+    if (onItemClick) {
+      onItemClick();
+    }
+  };
 
   return (
     <motion.div
@@ -92,20 +100,21 @@ export const NavItems = ({
         className
       )}>
       {items.map((item, idx) => (
-        <Link
-          to={`/${item.link}`}
+        <button
+          onClick={() => handleNavClick(item.link)}
           onMouseEnter={() => setHovered(idx)}
-          onClick={onItemClick}
-          className="relative px-4 py-2 text-white dark:text-neutral-300"
-          key={`link-${idx}`}
-          href={item.link}>
+          className={cn(
+            "relative px-4 py-2 text-white dark:text-neutral-300 transition-colors duration-200 bg-transparent border-none cursor-pointer",
+            hovered === idx && "text-black dark:text-black"
+          )}
+          key={`link-${idx}`}>
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
               className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800" />
           )}
           <span className="relative z-20">{item.name}</span>
-        </Link>
+        </button>
       ))}
     </motion.div>
   );

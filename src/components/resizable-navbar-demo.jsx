@@ -17,15 +17,15 @@ export default function NavbarDemo() {
   const navItems = [
     {
       name: "Home",
-      link: "#home",
+      link: "/",
     },
     {
       name: "Cars",
-      link: "#cars",
+      link: "/cars",
     },
     {
       name: "My Bookings",
-      link: "#mybookings",
+      link: "/bookings",
     },
   ];
 
