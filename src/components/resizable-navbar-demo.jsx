@@ -38,8 +38,8 @@ export default function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
-            <NavbarButton color = 'white' variant="secondary">List Cars</NavbarButton>
-            <NavbarButton onClick = {() => Navigate('/login')} color = 'black' variant="primary">Login</NavbarButton>
+            <NavbarButton color='white' variant="secondary">List Cars</NavbarButton>
+            <NavbarButton onClick={() => Navigate('/login')} color='black' variant="primary">Login</NavbarButton>
           </div>
         </NavBody>
 

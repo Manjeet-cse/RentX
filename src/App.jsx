@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import NavbarDemo from './components/resizable-navbar-demo'
 import Home from './components/Home'
 import Login from './components/auth/Login'
+import Cars from './components/Cars'
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/cars" element={<h1>Cars Page</h1>} />
+          <Route path="/cars" element={<Cars />} />
           <Route path="/bookings" element={<h1>My Bookings Page</h1>} />
           <Route path="/login" element={<Login />} />
         </Routes>
