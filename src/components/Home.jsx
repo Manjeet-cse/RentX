@@ -14,9 +14,7 @@ import img9 from '../assets/image9.png'
 import img10 from '../assets/image10.png'
 import blueBoxCar from '../assets/blueBoxCar.png'
 import CustomerFeedbackCard from './CustomerFeedbackCard'
-import { address, image } from 'motion/react-client'
 import { Link } from 'react-router-dom'
-import test from 'node:test'
 
 const Home = () => {
   const galleryItems = [
@@ -34,7 +32,7 @@ const Home = () => {
     },
     {
       image: img4,
-      text: ' Lamborghini Urus'
+      text: 'Lamborghini Urus'
     },
     {
       image: img5,
@@ -42,7 +40,7 @@ const Home = () => {
     },
     {
       image: img6,
-      text: ' Audi R8 V10'
+      text: 'Audi R8 V10'
     },
     {
       image: img7,
@@ -64,7 +62,7 @@ const Home = () => {
   const feedback = [
     {
       profilePhoto: img1,
-      name: "Priya",
+      name: "Priyaaa",
       address: "India",
       stars: 5,
       description: "I've rented cars from various companies, but the experience with CarRental was exceptional."
@@ -123,12 +121,12 @@ const Home = () => {
       <div>
         <div className='h-60 flex flex-col gap-3 items-center justify-center'>
           <h1 style={{ fontFamily: 'var(--font-car)' }} className='text-4xl font-extrabold'>What Our Customers Say</h1>
-          <p>Discover why discerning travelers choose StayVenture for their luxury accommodations around the world.</p>
+          <p>Discover why discerning travelers choose RentX for their luxury car rentals around the world.</p>
         </div>
         <div className='flex w-full justify-center gap-10'>
           {
-            feedback.map((obj) => {
-              return <CustomerFeedbackCard profilePhoto={obj.profilePhoto} name={obj.name} address={obj.address} stars={obj.stars} description={obj.description} />
+            feedback.map((obj, index) => {
+              return <CustomerFeedbackCard key={index} profilePhoto={obj.profilePhoto} name={obj.name} address={obj.address} stars={obj.stars} description={obj.description} />
             })
           }
 
