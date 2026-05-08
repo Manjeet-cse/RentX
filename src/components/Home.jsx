@@ -5,10 +5,18 @@ import CircularGallery from './ui/CircularGallery/CircularGallery'
 import img1 from '../assets/image1.png'
 import img2 from '../assets/image2.png'
 import img3 from '../assets/image3.png'
+import img4 from '../assets/image4.png'
+import img5 from '../assets/image5.png'
+import img6 from '../assets/image6.png'
+import img7 from '../assets/image7.png'
+import img8 from '../assets/image8.png'
+import img9 from '../assets/image9.png'
+import img10 from '../assets/image10.png'
 import blueBoxCar from '../assets/blueBoxCar.png'
 import CustomerFeedbackCard from './CustomerFeedbackCard'
-import { address } from 'motion/react-client'
+import { address, image } from 'motion/react-client'
 import { Link } from 'react-router-dom'
+import test from 'node:test'
 
 const Home = () => {
   const galleryItems = [
@@ -23,6 +31,34 @@ const Home = () => {
     {
       image: img3,
       text: 'third'
+    },
+    {
+      image: img4,
+      text: 'fourth'
+    },
+    {
+      image: img5,
+      text: 'fifth'
+    },
+    {
+      image: img6,
+      text: 'sixth'
+    },
+    {
+      image: img7,
+      text: 'seventh'
+    },
+    {
+      image: img8,
+      text: 'eighth'
+    },
+    {
+      image: img9,
+      text: "ninth"
+    },
+    {
+      image: img10,
+      text: "tenth"
     }
   ]
   const feedback = [
