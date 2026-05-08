@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 import { cars } from '../data/cars';
@@ -9,6 +9,10 @@ const CarDetails = () => {
 
   const [pickupDate, setPickupDate] = useState('2026-05-11');
   const [returnDate, setReturnDate] = useState('2026-05-29');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white pt-32 pb-20 px-4 sm:px-6 lg:px-8">
