@@ -17,7 +17,7 @@ const CarDetails = () => {
           <span className="mr-2 text-lg">←</span>
           Back to all cars
         </Link>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left Column (Details) */}
           <div className="lg:col-span-2">
@@ -68,7 +68,7 @@ const CarDetails = () => {
             </ul>
           </div>
 
-          {/* Right Column (Booking Widget) 
+          {/* Right Column (Booking Widget) */}
           <div className="lg:col-span-1">
             <div className="bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl p-8 sticky top-32">
               <div className="flex justify-between items-end mb-8 border-b border-slate-200 pb-6">
@@ -81,8 +81,8 @@ const CarDetails = () => {
               <div className="space-y-6">
                 <div>
                   <label className="block text-sm font-semibold text-slate-600 mb-2">Pickup Date</label>
-                  <input 
-                    type="date" 
+                  <input
+                    type="date"
                     value={pickupDate}
                     onChange={(e) => setPickupDate(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all bg-white font-medium"
@@ -90,25 +90,24 @@ const CarDetails = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-slate-600 mb-2">Return Date</label>
-                  <input 
-                    type="date" 
+                  <input
+                    type="date"
                     value={returnDate}
                     onChange={(e) => setReturnDate(e.target.value)}
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 text-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all bg-white font-medium"
                   />
                 </div>
-                
+
                 <button className="w-full bg-[#3b6df6] hover:bg-blue-700 text-white font-semibold py-3.5 rounded-lg transition-all duration-300 mt-4">
                   Book Now
                 </button>
-                
+
                 <p className="text-center text-xs text-slate-500 font-medium mt-4">
                   No credit card required to reserve
                 </p>
               </div>
             </div>
           </div>
-          */}
         </div>
       </div>
     </div>
