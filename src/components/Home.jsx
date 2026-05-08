@@ -22,43 +22,43 @@ const Home = () => {
   const galleryItems = [
     {
       image: img1,
-      text: 'first'
+      text: 'Rolls-Royce Phantom'
     },
     {
       image: img2,
-      text: 'second'
+      text: 'Ferrari Roma'
     },
     {
       image: img3,
-      text: 'third'
+      text: 'McLaren 720S'
     },
     {
       image: img4,
-      text: 'fourth'
+      text: ' Lamborghini Urus'
     },
     {
       image: img5,
-      text: 'fifth'
+      text: 'Mercedes-AMG GT'
     },
     {
       image: img6,
-      text: 'sixth'
+      text: ' Audi R8 V10'
     },
     {
       image: img7,
-      text: 'seventh'
+      text: 'Porsche 911 GT3'
     },
     {
       image: img8,
-      text: 'eighth'
+      text: 'Ford Mustang Shelby GT500'
     },
     {
       image: img9,
-      text: "ninth"
+      text: "Volkswagen Beetle"
     },
     {
       image: img10,
-      text: "tenth"
+      text: "Chevrolet Camaro SS."
     }
   ]
   const feedback = [
@@ -71,7 +71,7 @@ const Home = () => {
     },
     {
       profilePhoto: img2,
-      name: "Piyush",
+      name: "Piyuu",
       address: "India",
       stars: 5,
       description: "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!"
