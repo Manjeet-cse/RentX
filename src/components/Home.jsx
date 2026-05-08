@@ -28,14 +28,14 @@ const Home = () => {
   const feedback = [
     {
       profilePhoto: img1,
-      name: "Priyanshu",
+      name: "Priya",
       address: "India",
       stars: 5,
       description: "I've rented cars from various companies, but the experience with CarRental was exceptional."
     },
     {
       profilePhoto: img2,
-      name: "Priyanshu",
+      name: "Piyush",
       address: "India",
       stars: 5,
       description: "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!"
@@ -53,7 +53,7 @@ const Home = () => {
     <>
       <div className='w-screen relative h-screen flex'>
         <img className='absolute w-[80vw] top-[70%] left-1/2 z-2 -translate-x-1/2 -translate-y-1/2' src={car} alt="" />
-        <h1 className='absolute font-extrabold z-1 top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18rem] text-white'>Race</h1>
+        <h1 className='absolute font-extrabold z-1 top-[35%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18rem] text-white'>RentX</h1>
         <div className="w-[40%] h-full bg-amber-400"></div>
         <div className="w-[60%] bg-gray-900 h-full"></div>
         <GradualBlurMemo position="bottom" height="8rem" strength={3} />
