@@ -3,11 +3,17 @@ import { Link } from 'react-router-dom';
 
 import { cars as carsData } from '../data/cars';
 const Cars = () => {
-  const [cars, setCars] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  useEffect(() => {
-    setCars(carsData);
-  }, []);
+  const filteredCars = carsData.filter(car => {
+    const query = searchQuery.toLowerCase();
+    return (
+      car.name.toLowerCase().includes(query) ||
+      car.category.toLowerCase().includes(query) ||
+      car.fuel.toLowerCase().includes(query) ||
+      car.transmission.toLowerCase().includes(query)
+    );
+  });
 
   return (
     <div className="min-h-screen bg-slate-50 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -27,12 +33,13 @@ const Cars = () => {
           </div>
           <input
             type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             className="block w-full pl-12 pr-14 py-4 bg-white border-0 shadow-sm rounded-full text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-600 transition-all text-base"
             placeholder="Search by make, model, or features"
           />
           <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
             <button className="p-2 text-slate-400 hover:text-blue-600 transition-colors cursor-pointer rounded-full hover:bg-slate-100">
-              <span className="text-xl">⚙️</span>
             </button>
           </div>
         </div>
@@ -40,12 +47,12 @@ const Cars = () => {
 
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <p className="text-slate-500 font-medium">Showing {cars.length} Cars</p>
+          <p className="text-slate-500 font-medium">Showing {filteredCars.length} Cars</p>
         </div>
 
         {/* Cars*/}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {cars.map((car) => (
+          {filteredCars.map((car) => (
             <Link to={`/car-details/${car.id}`} key={car.id} className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100 group block">
               {/* Image */}
               <div className="relative h-60 overflow-hidden bg-slate-200">

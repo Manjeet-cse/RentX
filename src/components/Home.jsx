@@ -8,6 +8,7 @@ import img3 from '../assets/image3.png'
 import blueBoxCar from '../assets/blueBoxCar.png'
 import CustomerFeedbackCard from './CustomerFeedbackCard'
 import { address } from 'motion/react-client'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   const galleryItems = [
@@ -47,7 +48,7 @@ const Home = () => {
       description: "I highly recommend CarRental! Their fleet is amazing, and I always feel like I'm getting the best deal with excellent service."
     }
   ]
-  
+
   return (
     <>
       <div className='w-screen relative h-screen flex'>
@@ -64,14 +65,14 @@ const Home = () => {
         </h1>
         <p className='mt-3 text-base text-slate-600'>Explore our selection of premium vehicles available for your next adventure.</p>
       </div>
-      <div className='h-140 flex items-center flex-col relative'>
-        <CircularGallery items={galleryItems} bend={3} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}
+      <div className='h-140 flex items-center flex-col relative '>
+        <CircularGallery items={galleryItems} bend={3} textColor="#000000ff" borderRadius={0.05} scrollEase={0.02}
           scrollSpeed={2}
         />
-        <button className='border py-1 rounded w-40'>Explore all cars {'->'}</button>
+        <Link to="/cars"><button className='border py-1 rounded w-40'>Explore all cars {'->'}</button></Link>
       </div>
       <div className='w-full flex justify-center p-20'>
-          <div className='h-60 items-center flex p-10 rounded-4xl w-[80vw] bg-linear-to-r from-[#1E5BFF] via-[#4F8BFF] to-[#9FBFEF]'>
+        <div className='h-60 items-center flex p-10 rounded-4xl w-[80vw] bg-linear-to-r from-[#1E5BFF] via-[#4F8BFF] to-[#9FBFEF]'>
           <div className='flex flex-col gap-3'>
             <h1 className='text-white font-bold text-3xl'>Do You Own a Luxury Car?</h1>
             <p className='text-white w-150'>Monetize your vehicle effortlessly by listing it on CarRental.
@@ -94,14 +95,14 @@ const Home = () => {
               return <CustomerFeedbackCard profilePhoto={obj.profilePhoto} name={obj.name} address={obj.address} stars={obj.stars} description={obj.description} />
             })
           }
-          
+
         </div>
       </div>
       <div className="flex flex-col gap-6 justify-center h-60 items-center">
         <h1 className='font-extrabold text-4xl' style={{ fontFamily: 'var(--font-car)' }}>Never Miss a Deal!</h1>
         <div className='flex gap-6'>
-        <input className='border rounded-2xl w-120 px-4 h-10' placeholder='Enter your email id' type="text" />
-        <button className='px-7 bg-blue-600 h-10 text-white rounded-2xl'>Subscribe</button>
+          <input className='border rounded-2xl w-120 px-4 h-10' placeholder='Enter your email id' type="text" />
+          <button className='px-7 bg-blue-600 h-10 text-white rounded-2xl'>Subscribe</button>
         </div>
       </div>
     </>
