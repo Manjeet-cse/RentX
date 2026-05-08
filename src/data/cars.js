@@ -1,0 +1,80 @@
+export const cars = [
+  {
+    id: 1,
+    name: "Toyota Corolla",
+    category: "Sedan",
+    year: 2021,
+    price: 130,
+    image: "https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=1000",
+    seats: 4,
+    transmission: "Automatic",
+    fuel: "Diesel",
+    location: "Los Angeles",
+    available: true
+  },
+  {
+    id: 2,
+    name: "BMW X5",
+    category: "SUV",
+    year: 2006,
+    price: 300,
+    image: "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&q=80&w=1000",
+    seats: 4,
+    transmission: "Semi-Automatic",
+    fuel: "Hybrid",
+    location: "New York",
+    available: true
+  },
+  {
+    id: 4,
+    name: "Mercedes-Benz C-Class",
+    category: "Sedan",
+    year: 2022,
+    price: 180,
+    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&q=80&w=1000",
+    seats: 5,
+    transmission: "Automatic",
+    fuel: "Petrol",
+    location: "Miami",
+    available: true
+  },
+  {
+    id: 5,
+    name: "Audi Q7",
+    category: "SUV",
+    year: 2023,
+    price: 350,
+    image: "https://images.unsplash.com/photo-1606152421802-db97b9c7a11b?auto=format&fit=crop&q=80&w=1000",
+    seats: 7,
+    transmission: "Automatic",
+    fuel: "Diesel",
+    location: "Seattle",
+    available: false
+  },
+  {
+    id: 6,
+    name: "Honda Civic",
+    category: "Sedan",
+    year: 2020,
+    price: 90,
+    image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&q=80&w=1000",
+    seats: 5,
+    transmission: "Manual",
+    fuel: "Petrol",
+    location: "Austin",
+    available: true
+  },
+  {
+    id: 7,
+    name: "Ford Mustang",
+    category: "Coupe",
+    year: 2021,
+    price: 200,
+    image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    seats: 4,
+    transmission: "Automatic",
+    fuel: "Petrol",
+    location: "Las Vegas",
+    available: true
+  }
+];
