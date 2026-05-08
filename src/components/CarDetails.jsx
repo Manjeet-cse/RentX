@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+
 
 import { cars } from '../data/cars';
 
-const CarDetails = () => {
+const CarDetails = ({ addBooking }) => {
+  const navigate = useNavigate();
   const { id } = useParams();
   const car = cars.find(c => c.id === parseInt(id)) || cars[0];
 
@@ -23,20 +25,16 @@ const CarDetails = () => {
         </Link>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          {/* Left Column (Details) */}
           <div className="lg:col-span-2">
-            {/* Image */}
             <div className="rounded-xl overflow-hidden mb-8 h-[400px] md:h-[500px]">
               <img src={car.image} alt={car.name} className="w-full h-full object-cover" />
             </div>
 
-            {/* Title & Category */}
             <h1 className="text-4xl font-extrabold text-slate-900 mb-2">{car.name}</h1>
             <p className="text-lg text-slate-500 mb-8 font-medium">{car.category} • {car.year}</p>
 
             <div className="border-t border-slate-200 mb-8"></div>
 
-            {/* Specs Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
               <div className="bg-slate-50 p-5 rounded-xl flex flex-col items-center justify-center text-center">
                 <span className="text-2xl mb-2">👤</span>
@@ -56,13 +54,11 @@ const CarDetails = () => {
               </div>
             </div>
 
-            {/* Description */}
             <h2 className="text-xl font-bold text-slate-900 mb-4">Description</h2>
             <p className="text-slate-500 font-medium leading-relaxed mb-10">
               The {car.name} is a mid-size luxury sedan produced by {car.name.split(' ')[0]}. The Corolla made its debut in 2008 as the first sedan ever produced by {car.name.split(' ')[0]}.
             </p>
 
-            {/* Features */}
             <h2 className="text-xl font-bold text-slate-900 mb-4">Features</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-500 font-medium">
               <li className="flex items-center"><span className="text-blue-500 mr-3 font-bold text-lg">✓</span> Bluetooth Connectivity</li>
@@ -72,7 +68,6 @@ const CarDetails = () => {
             </ul>
           </div>
 
-          {/* Right Column (Booking Widget) */}
           <div className="lg:col-span-1">
             <div className="bg-white border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl p-8 sticky top-32">
               <div className="flex justify-between items-end mb-8 border-b border-slate-200 pb-6">
@@ -102,7 +97,10 @@ const CarDetails = () => {
                   />
                 </div>
 
-                <button className="w-full bg-[#3b6df6] hover:bg-blue-700 text-white font-semibold py-3.5 rounded-lg transition-all duration-300 mt-4">
+                <button onClick={() => {
+                  addBooking({ car, pickupDate, returnDate });
+                  navigate('/bookings');
+                }} className="w-full bg-[#3b6df6] hover:bg-blue-700 text-white font-semibold py-3.5 rounded-lg transition-all duration-300 mt-4">
                   Book Now
                 </button>
 

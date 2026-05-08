@@ -22,7 +22,6 @@ const CustomerFeedbackCard = ({ profilePhoto, name, address, stars, description 
               let starVal = idx + 1;
               return <span
               key={starVal}
-              onClick={() => setRating(idx+1)}
               style={{
                 fontSize: '1.5rem',
                 color: 'gold'

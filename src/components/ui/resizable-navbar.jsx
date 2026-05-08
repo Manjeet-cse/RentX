@@ -9,7 +9,7 @@ import {
 } from "motion/react";
 
 import React, { useRef, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 
 export const Navbar = ({
@@ -84,6 +84,8 @@ export const NavItems = ({
 }) => {
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const handleNavClick = (link) => {
     navigate(link);
@@ -96,7 +98,7 @@ export const NavItems = ({
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium transition duration-200 lg:flex lg:space-x-2",
         className
       )}>
       {items.map((item, idx) => (
@@ -104,14 +106,18 @@ export const NavItems = ({
           onClick={() => handleNavClick(item.link)}
           onMouseEnter={() => setHovered(idx)}
           className={cn(
-            "relative px-4 py-2 text-white dark:text-neutral-300 transition-colors duration-200 bg-transparent border-none cursor-pointer",
-            hovered === idx && "text-black dark:text-black"
+            "relative px-4 py-2 transition-colors duration-200 bg-transparent border-none cursor-pointer",
+            isHomePage ? "text-white dark:text-neutral-300" : "text-black",
+            hovered === idx && (isHomePage ? "text-black dark:text-black" : "text-white")
           )}
           key={`link-${idx}`}>
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800" />
+              className={cn(
+                "absolute inset-0 h-full w-full rounded-full",
+                isHomePage ? "bg-gray-100 dark:bg-neutral-800" : "bg-slate-900"
+              )} />
           )}
           <span className="relative z-20">{item.name}</span>
         </button>

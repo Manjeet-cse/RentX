@@ -6,8 +6,11 @@ import Home from './components/Home'
 import Login from './components/auth/Login'
 import Cars from './components/Cars'
 import CarDetails from './components/CarDetails'
+import MyBookings from './components/MyBookings'
 
 const App = () => {
+  const [bookings, setBookings] = React.useState([]);
+  const addBooking = (booking) => setBookings(prev => [...prev, booking]);
   return (
     <>
       <div className="relative">
@@ -17,8 +20,8 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cars" element={<Cars />} />
-          <Route path="/car-details/:id" element={<CarDetails />} />
-          <Route path="/bookings" element={<h1>My Bookings Page</h1>} />
+          <Route path="/car-details/:id" element={<CarDetails addBooking={addBooking} />} />
+          <Route path="/bookings" element={<MyBookings bookings={bookings} />} />
           <Route path="/login" element={<Login />} />
         </Routes>
         <div className='mt-15'>

@@ -64,14 +64,14 @@ const Home = () => {
   const feedback = [
     {
       profilePhoto: img1,
-      name: "Priya",
+      name: "Priyaaa",
       address: "India",
       stars: 5,
       description: "I've rented cars from various companies, but the experience with CarRental was exceptional."
     },
     {
       profilePhoto: img2,
-      name: "Piyush",
+      name: "Piyu Marwani",
       address: "India",
       stars: 5,
       description: "CarRental made my trip so much easier. The car was delivered right to my door, and the customer service was fantastic!"
